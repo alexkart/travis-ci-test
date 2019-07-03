@@ -3,9 +3,11 @@
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrong!Passw0rd' -p 1433:1433 -d microsoft/mssql-server-linux:2017-latest
 
 
-sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
-sudo apt-get update
+sudo su
+curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+curl https://packages.microsoft.com/config/ubuntu/14.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+exit
+sudo apt-get -y update
 sudo ACCEPT_EULA=Y apt-get -y install msodbcsql17
 # optional: for bcp and sqlcmd
 sudo ACCEPT_EULA=Y apt-get -y install mssql-tools
