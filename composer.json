@@ -1,14 +1,12 @@
 {
-    "name": "vagrant/travis-ci-test",
-    "type": "project",
-    "require-dev": {
-        "phpunit/phpunit": "^8.2"
-    },
-    "authors": [
-        {
-            "name": "John Smith",
-            "email": "john@example.com"
-        }
-    ],
-    "require": {}
+  "name": "vagrant/travis-ci-test",
+  "type": "project",
+  "require-dev": {},
+  "authors": [
+    {
+      "name": "John Smith",
+      "email": "john@example.com"
+    }
+  ],
+  "require": {}
 }
