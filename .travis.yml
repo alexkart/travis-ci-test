@@ -13,7 +13,7 @@ install:
   - travis_retry composer self-update
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
   - travis_retry composer install $DEFAULT_COMPOSER_FLAGS
-  - sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrong!Passw0rd' -p 1433:1433 -d microsoft/mssql-server-linux:2017-latest
+  - ./install_mssql.sh
 
 before_script: travis_retry mysql -e 'CREATE DATABASE `test`;';
 
