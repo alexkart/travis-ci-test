@@ -16,5 +16,7 @@ source ~/.bashrc
 # optional: for unixODBC development headers
 sudo apt-get -y install unixodbc-dev
 
+sqlcmd -U sa -P YourStrong!Passw0rd -S .\SQLEXPRESS -Q "CREATE DATABASE yiitest"
+
 pecl install sqlsrv
 pecl install pdo_sqlsrv
