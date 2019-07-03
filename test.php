@@ -10,11 +10,11 @@ try {
     print 'Error!: ' . $e->getMessage() . "\n";
 }
 
-/*try {
-    $conn = new PDO("sqlsrv:server = tcp:f345f23dfrter.database.windows.net,1433; Database = testdb1", "ert345g34f3", "G~ZE6R+LiW");
+try {
+    $conn = new PDO("sqlsrv:server = tcp:localhost,1433; Database = testdb1", "SA", "YourStrong!Passw0rd");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     print_r($conn);
 } catch (PDOException $e) {
     print('Error connecting to SQL Server.');
     print_r($e);
-}*/
+}
